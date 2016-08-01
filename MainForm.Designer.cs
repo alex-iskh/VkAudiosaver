@@ -63,15 +63,16 @@
             this.loadButton.TabIndex = 2;
             this.loadButton.Text = "Загрузить";
             this.loadButton.UseVisualStyleBackColor = true;
+            this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 561);
-            this.Controls.Add(this.browser);
             this.Controls.Add(this.songListBox);
             this.Controls.Add(this.loadButton);
+            this.Controls.Add(this.browser);
             this.Name = "MainForm";
             this.Text = "VK Audiosaver";
             this.Load += new System.EventHandler(this.MainForm_Load);
