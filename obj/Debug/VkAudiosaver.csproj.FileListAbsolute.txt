@@ -1,9 +1,0 @@
-c:\users\alexander\documents\visual studio 2015\Projects\VkAudiosaver\VkAudiosaver\bin\Debug\VkAudiosaver.exe.config
-C:\Users\Alexander\Documents\Visual Studio 2015\Projects\VkAudiosaver\VkAudiosaver\bin\Debug\VkAudiosaver.exe
-C:\Users\Alexander\Documents\Visual Studio 2015\Projects\VkAudiosaver\VkAudiosaver\bin\Debug\VkAudiosaver.pdb
-C:\Users\Alexander\Documents\Visual Studio 2015\Projects\VkAudiosaver\VkAudiosaver\obj\Debug\VkAudiosaver.csprojResolveAssemblyReference.cache
-C:\Users\Alexander\Documents\Visual Studio 2015\Projects\VkAudiosaver\VkAudiosaver\obj\Debug\VkAudiosaver.MainForm.resources
-C:\Users\Alexander\Documents\Visual Studio 2015\Projects\VkAudiosaver\VkAudiosaver\obj\Debug\VkAudiosaver.Properties.Resources.resources
-C:\Users\Alexander\Documents\Visual Studio 2015\Projects\VkAudiosaver\VkAudiosaver\obj\Debug\VkAudiosaver.csproj.GenerateResource.Cache
-C:\Users\Alexander\Documents\Visual Studio 2015\Projects\VkAudiosaver\VkAudiosaver\obj\Debug\VkAudiosaver.exe
-C:\Users\Alexander\Documents\Visual Studio 2015\Projects\VkAudiosaver\VkAudiosaver\obj\Debug\VkAudiosaver.pdb
