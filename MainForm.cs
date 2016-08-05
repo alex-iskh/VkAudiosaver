@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Web;
+using System.Net;
 using System.Xml;
+using System.IO;
 using System.Globalization;
 
 namespace VkAudiosaver
@@ -18,6 +20,7 @@ namespace VkAudiosaver
         public MainForm()
         {
             InitializeComponent();
+            SongList = new BindingList<Song>();
         }
 
         private static class VkData
@@ -38,7 +41,7 @@ namespace VkAudiosaver
         }
 
         //список песен пельзователя
-        private List<Song> SongList;
+        private BindingList<Song> SongList;
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -69,8 +72,18 @@ namespace VkAudiosaver
 
         private void loadButton_Click(object sender, EventArgs e)
         {
-            //просим выбрать папку
-            //загружаем аудио из списка
+            //для выбора папки открываем диалоговое окно
+            if (folderBrowser.ShowDialog() == DialogResult.OK)
+            {
+                //сохраняем в папку выбранные в списке песни в формате "исполнитель – композиция.mp3"
+                using (WebClient client = new WebClient())
+                {
+                    foreach (Song song in songListBox.SelectedItems)
+                        client.DownloadFile(song.Url,folderBrowser.SelectedPath + "\\" 
+                            + string.Join("", song.ToString().Split(Path.GetInvalidFileNameChars())) + ".mp3");
+                }
+                MessageBox.Show("Аудиозаписи успешно загружены", "Загрузка завершена", MessageBoxButtons.OK);
+            }
         }
 
         private void Authorization()
@@ -98,8 +111,9 @@ namespace VkAudiosaver
             XmlNode root = songXml.DocumentElement;
             if (root.Name == "response")
             {
-                foreach (XmlNode audio in root.ChildNodes)
-                    SongList.Add(new Song(audio["artist"].InnerText, audio["title"].InnerText, audio["url"].InnerText));
+                foreach (XmlNode node in root["items"].ChildNodes)
+                    if (node.Name == "audio")
+                        SongList.Add(new Song(node["artist"].InnerText, node["title"].InnerText, node["url"].InnerText));
             }
             else if (root.Name == "error")
                 ShowError("Can't get song list", root["error_msg"].InnerText);
@@ -125,6 +139,8 @@ class Song
     private string artist;
     private string title;
     private string downloadUrl;
+
+    public string Url { get { return downloadUrl; } }
 
     public override string ToString()
     {

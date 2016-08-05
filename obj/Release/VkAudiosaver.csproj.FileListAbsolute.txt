@@ -1,0 +1,8 @@
+C:\Users\Alexander\Documents\Visual Studio 2015\Projects\VkAudiosaver\VkAudiosaver\bin\Release\VkAudiosaver.exe.config
+C:\Users\Alexander\Documents\Visual Studio 2015\Projects\VkAudiosaver\VkAudiosaver\bin\Release\VkAudiosaver.exe
+C:\Users\Alexander\Documents\Visual Studio 2015\Projects\VkAudiosaver\VkAudiosaver\bin\Release\VkAudiosaver.pdb
+C:\Users\Alexander\Documents\Visual Studio 2015\Projects\VkAudiosaver\VkAudiosaver\obj\Release\VkAudiosaver.MainForm.resources
+C:\Users\Alexander\Documents\Visual Studio 2015\Projects\VkAudiosaver\VkAudiosaver\obj\Release\VkAudiosaver.Properties.Resources.resources
+C:\Users\Alexander\Documents\Visual Studio 2015\Projects\VkAudiosaver\VkAudiosaver\obj\Release\VkAudiosaver.csproj.GenerateResource.Cache
+C:\Users\Alexander\Documents\Visual Studio 2015\Projects\VkAudiosaver\VkAudiosaver\obj\Release\VkAudiosaver.exe
+C:\Users\Alexander\Documents\Visual Studio 2015\Projects\VkAudiosaver\VkAudiosaver\obj\Release\VkAudiosaver.pdb
